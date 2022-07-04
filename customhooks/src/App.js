@@ -1,5 +1,4 @@
 import "./App.css";
-// import LoginForm from "./components/loginForm/LoginForm.jsx";
 import React, { useState } from "react";
 
 
@@ -70,7 +69,7 @@ function App() {
       <div className="Auth-form-content">
         <h3 className="Auth-form-title">Sign In</h3>
         <div className="form-group mt-3">
-          <label>Email address</label>
+          <label>Email </label>
           <input
             type="email"
             className="form-control mt-1"
@@ -85,8 +84,8 @@ function App() {
             placeholder="Enter password" name="pass" required />
           {renderErrorMessage("pass")}
         </div>
-        <div className="d-grid gap-2 mt-3">
-          <input type="submit" className="btn btn-dark"/>
+        <div className="d-grid gap-2 mt-4">
+          <input type="submit" className="btn btn-dark" value="SignUp"/>
         </div>
       </div>
     </form>
@@ -96,7 +95,6 @@ function App() {
   return (
     
     <div className="app">
-      
       <div className="login-form">
         {isSubmitted ? <div className="Auth-form-container "> <h1> User is successfully logged in</h1></div> : renderForm}
       </div>

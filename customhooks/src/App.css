@@ -39,3 +39,7 @@ label {
   font-weight: 600;
   color: rgb(34, 34, 34);
 }
+.btn {
+width:23vw;
+box-shadow: rgba(0, 0, 0, 0.365) 1px 1px 10px;
+}
