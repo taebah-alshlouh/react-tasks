@@ -47,7 +47,7 @@ function RenderingArrayOfObjects(){
   )
   return(
       <div>
-          
+        <h1>map function</h1>
         <Table hover>
             <thead>
               <tr>    
