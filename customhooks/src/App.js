@@ -11,17 +11,25 @@ function App() {
   // User Login info
   const database = [
     {
-      username: "taebah",
+      email: "taebah@gmail.com",
       password: "12345"
     },
     {
-      username: "saja",
+      email: "saja@gmail.com",
+      password: "12345"
+    },
+    {
+      email: "hadi@gmail.com",
+      password: "12345"
+    },
+    {
+      email: "Ibrahim@gmail.com",
       password: "12345"
     }
   ];
 
   const errors = {
-    uname: "invalid username",
+    uemail: "invalid email",
     pass: "invalid password"
   };
 
@@ -29,10 +37,10 @@ function App() {
     //Prevent page reload
     event.preventDefault();
 
-    var { uname, pass } = document.forms[0];
+    var { uemail, pass } = document.forms[0];
 
     // Find user login info
-    const userData = database.find((user) => user.username === uname.value);
+    const userData = database.find((user) => user.email === uemail.value);
 
     // Compare user info
     if (userData) {
@@ -43,8 +51,8 @@ function App() {
         setIsSubmitted(true);
       }
     } else {
-      // Username not found
-      setErrorMessages({ name: "uname", message: errors.uname });
+      // email not found
+      setErrorMessages({ name: "email", message: errors.uemail });
     }
   };
 
@@ -64,10 +72,10 @@ function App() {
         <div className="form-group mt-3">
           <label>Email address</label>
           <input
-            type="text"
+            type="email"
             className="form-control mt-1"
-            placeholder="Enter email" name="uname" required />
-          {renderErrorMessage("uname")}
+            placeholder="Enter email" name="uemail" required />
+          {renderErrorMessage("uemail")}
         </div>
         <div className="form-group mt-3">
           <label>Password</label>
@@ -78,7 +86,7 @@ function App() {
           {renderErrorMessage("pass")}
         </div>
         <div className="d-grid gap-2 mt-3">
-          <input type="submit" className="btn btn-primary"/>
+          <input type="submit" className="btn btn-dark"/>
         </div>
       </div>
     </form>
@@ -90,7 +98,7 @@ function App() {
     <div className="app">
       
       <div className="login-form">
-        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+        {isSubmitted ? <div className="Auth-form-container "> <h1> User is successfully logged in</h1></div> : renderForm}
       </div>
     </div>
   );
