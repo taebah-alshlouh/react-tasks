@@ -67,7 +67,7 @@ function App() {
  <div className="Auth-form-container">
     <form className="Auth-form" onSubmit={handleSubmit}>
       <div className="Auth-form-content">
-        <h3 className="Auth-form-title">Sign In</h3>
+        <h3 className="Auth-form-title">Login</h3>
         <div className="form-group mt-3">
           <label>Email </label>
           <input
@@ -85,7 +85,7 @@ function App() {
           {renderErrorMessage("pass")}
         </div>
         <div className="d-grid gap-2 mt-4">
-          <input type="submit" className="btn btn-dark" value="SignUp"/>
+          <input type="submit" className="btn btn-dark" value="Login"/>
         </div>
       </div>
     </form>
